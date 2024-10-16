@@ -8,6 +8,10 @@ app.get('/', (req, res)=> {
     res.send('Hello from Node API ser')
 })
 
+app.post('/api/products',(req, res)=>{
+    res.send('Data Received')
+})
+
 mongoose.connect("mongodb+srv://clint_tay:clinton2024@backend-simple.omh0a.mongodb.net/?retryWrites=true&w=majority&appName=backend-simple").then(()=> {
     console.log('connected to the database');
     app.listen(3000, ()=>{
